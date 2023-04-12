@@ -518,6 +518,25 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form-wrapper">
+          <form class="footer-email-form" name="user-email-form">
+            <div class="footer-input-wrapper">
+              <span class="footer-form-title">Subscribe</span>
+              <input
+                class="input-footer-email"
+                type="email"
+                name="user-email"
+                placeholder="E-mail"
+              />
+            </div>
+            <button class="footer-email-form-btn" type="submit">
+              Subscribe
+              <svg class="footer-email-svg">
+                <use href="./images/symbol-defs.svg#icon-telegraph"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -584,17 +603,22 @@
               name="user_message"
               class="modal-form-message"
               placeholder="Text input"
-            >
-            </textarea>
+            ></textarea>
           </label>
           <input
             id="user-policy"
             type="checkbox"
             name="user_policy"
-            class="modal-form-check"
+            class="modal-form-check visually-hidden"
           />
-          <label for="user-policy" class="modal-form-check-desc"
-            >I accept the terms and conditions of the
+
+          <label for="user-policy" class="modal-form-check-desc">
+            <span class="modal-form-fake-checkbox">
+              <!-- <svg class="fake-checkbox">
+                <use href="./images/symbol-defs.svg#icon-check-on"></use>
+              </svg> -->
+            </span>
+            I accept the terms and conditions of the&nbsp;
             <a href="">Privacy Policy</a>
           </label>
           <button type="submit" class="modal-form-submit">Send</button>

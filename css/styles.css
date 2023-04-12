@@ -328,10 +328,7 @@ button {
   border: none;
   border-radius: 4px;
 
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-background);
   background: var(--primary-brand);
@@ -352,7 +349,6 @@ button {
   font-size: 56px;
   line-height: 1.07;
   text-align: center;
-  letter-spacing: 0.02em;
   color: var(--white-background);
 }
 
@@ -360,7 +356,6 @@ button {
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
-  letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--dark);
 }
@@ -369,14 +364,10 @@ button {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--dark);
 }
 
 .title-description {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
   color: var(--text);
 }
 
@@ -410,7 +401,6 @@ button {
 
 .member-social-links {
   display: flex;
-  margin-top: 8px;
 }
 
 .social-link-item {
@@ -488,10 +478,7 @@ button {
   padding: 16px 32px;
   border-radius: 4px;
 
-  font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
   letter-spacing: 0.04em;
   background-color: var(--light);
   color: var(--primary-brand);
@@ -570,7 +557,9 @@ button {
 }
 
 .footer-second-tittle {
+  font-weight: 500;
   color: var(--white-background);
+  margin-bottom: 16px;
 }
 
 .footer-social-link {
@@ -602,6 +591,86 @@ button {
 .footer .container {
   display: flex;
   align-items: baseline;
+}
+
+.footer-form-title {
+  font-weight: 500;
+  color: var(--white-background);
+  margin-bottom: 16px;
+}
+
+.footer-form-wrapper {
+  margin-left: 80px;
+}
+
+.footer-email-form {
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-footer-email {
+  width: 264px;
+  height: 40px;
+  padding: 8px 16px;
+  font-size: 14px;
+  outline: none;
+
+  color: var(--white-background);
+  border: 1px solid var(--white-background);
+  border-radius: 4px;
+  background: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  transition: border-color var(--transition);
+}
+
+.input-footer-email:focus {
+  border-color: var(--primary-brand);
+}
+
+.input-footer-email::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
+  color: var(--white-background);
+}
+
+.footer-email-form-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  margin-left: 24px;
+
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  background: var(--primary-brand);
+  cursor: pointer;
+
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.footer-email-form-btn:hover,
+.footer-email-form-btn:focus {
+  color: var(--white-background);
+  background-color: var(--pressed-state);
+  border-color: var(--primary-brand);
+}
+
+.footer-email-svg {
+  margin-left: 16px;
+  width: 24px;
+  height: 24px;
+  fill: var(--white-background);
 }
 
 /* ============ /footer =========== */
@@ -681,12 +750,6 @@ button {
   width: 8px;
   height: 8px;
 }
-/* 
-.fill-in-form {
-  padding-top: 72px;
-  padding-right: 24px;
-  padding-left: 24px;
-} */
 
 .modal-form {
   display: flex;
@@ -694,6 +757,14 @@ button {
 }
 
 .modal-title {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 .modal-form-field {
@@ -741,8 +812,9 @@ button {
   padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--modal-overlay);
-  transition: border-color var(--transition);
   font-size: 14px;
+
+  transition: border-color var(--transition);
 }
 
 .modal-form-message:focus {
@@ -758,6 +830,22 @@ button {
   color: var(--modal-overlay);
 }
 
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: var(--subtle-Text);
+}
+
+.modal-form-check-desc a {
+  color: var(--primary-brand);
+}
+
 .modal-form-check-desc::before {
   display: block;
   width: 16px;
@@ -766,15 +854,44 @@ button {
   border-radius: 2px;
   content: '';
   cursor: pointer;
+  transition: border-color var(--transition);
+  margin-right: 8px;
 }
 
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: var(--pressed-state);
   background-image: url(../images/check-on.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+
+.modal-form-check:focus + .modal-form-check-desc::before {
+  border-color: var(--pressed-state);
 }
 
 /* button */
 .modal-form-submit {
+  width: 169px;
+  align-self: center;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--white-background);
+  background: var(--primary-brand);
+  cursor: pointer;
+
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  color: var(--white-background);
+  background-color: var(--pressed-state);
+  border-color: var(--primary-brand);
 }
 
 .modal-icon {
